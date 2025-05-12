@@ -3,6 +3,16 @@
      let textarea =document.getElementById('textarea');
      let userInfo = document.getElementById('userInfo');
      let img = document.getElementById('img');
+     let errorMessage =document.getElementById("error-message")
+     btn.addEventListener("click", ()=>{
+            if(username.length < 4){
+              errorMessage.innerText= 'name must be longer than 4 characters'
+            }else if(textarea.length < 6){
+                errorMessage.innerText= 'name must be longer than 4 characters'
+            }else if(img === '' || img === null){
+                errorMessage.innerText= 'name must be longer than 4 characters'
+            }
+        })
 
      btn.addEventListener("click", ()=>{
         fetch('https://68219a01259dad2655afc15b.mockapi.io/post', {
@@ -19,6 +29,7 @@
             .then((response) => response.json())
             .then((json) => console.log(json));
      })
+  
      
      fetch('https://68219a01259dad2655afc15b.mockapi.io/post')
       .then(response => response.json())
@@ -34,6 +45,7 @@
             post.innerText= element.textarea;
             img.src=element.img;
             del.innerText="delete"
+            del.classList.add("del-btn")
             card.appendChild(text);
             card.appendChild(post);
             card.appendChild(img);
@@ -44,7 +56,6 @@
           fetch(`https://68219a01259dad2655afc15b.mockapi.io/post/${element.id}`, {
             method: 'DELETE',
           })
-        }
-        )
+        })
     })
-    })
+})
