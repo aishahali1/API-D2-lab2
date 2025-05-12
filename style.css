@@ -1,22 +1,40 @@
-.container{
-    width: 50vw; height: 20vw;
-    border: 1px solid black;
+body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.container{
+    width: 50vw; height: 20vw;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .contain{
     width: 25vw;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #userInfo{
-   border: 1px solid gray;
+   
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 30%;
+   
+}
+.card{
+    border: 1px solid gray;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #userInfo img{
     width: 30%;
