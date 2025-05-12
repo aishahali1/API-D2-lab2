@@ -1,0 +1,23 @@
+.container{
+    width: 50vw; height: 20vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contain{
+    width: 25vw;
+    gap: 10px;
+}
+#userInfo{
+   border: 1px solid gray;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 30%;
+}
+#userInfo img{
+    width: 30%;
+}
